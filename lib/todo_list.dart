@@ -5,7 +5,7 @@ import 'package:todo_list/todo.dart';
 typedef ToggleTodoCallback = void Function(Todo, bool);
 
 class TodoList extends StatelessWidget {
-  TodoList({@required this.todos, this.onTodoToggle});
+  TodoList({required this.todos, required this.onTodoToggle});
 
   final List<Todo> todos;
   final ToggleTodoCallback onTodoToggle;
@@ -16,8 +16,8 @@ class TodoList extends StatelessWidget {
     return CheckboxListTile(
       value: todo.isDone,
       title: Text(todo.title),
-      onChanged: (bool isChecked) {
-        onTodoToggle(todo, isChecked);
+      onChanged: (bool? value) {
+        onTodoToggle(todo, value!);
       },
     );
   }

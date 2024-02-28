@@ -32,4 +32,6 @@ class NewTodoDialog extends StatelessWidget {
       ],
     );
   }
+
+  FlatButton({required Text child, required Null Function() onPressed}) {}
 }

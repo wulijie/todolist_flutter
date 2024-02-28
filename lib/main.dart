@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:todo_list/todo_list_screen.dart';
 
 void main() {
-  SystemChrome.setEnabledSystemUIOverlays([]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
   runApp(MyApp());
 }
 
